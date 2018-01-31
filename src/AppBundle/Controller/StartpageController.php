@@ -11,16 +11,27 @@ class StartpageController
     /**
      * @Route("my_crowdin/")
      */
-    public function numberAction()
+    public function startAction()
     {
-        $number = mt_rand(0, 100);
-
         return new Response(
             '<html>
               <head>
-              <p>lololo</p>
+
               </head>
-              <body>Lucky number: '.$number.'</body>
+              <body>
+                <center>
+                  <p>
+                  Welcome to my_crowdin project
+                  </p>
+                  <p>
+                  Would you like to be part of our amazing community of devoted translaters ? </br>
+                  <p>
+                  Don&#145t hesitate and join us now !
+                  </p>
+                  </p>
+
+                </center>
+              </body>
             </html>'
         );
     }
