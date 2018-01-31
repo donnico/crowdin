@@ -2,11 +2,11 @@
 parameters:
     database_host: 127.0.0.1
     database_port: null
-    database_name: symfony
+    database_name: crowdin
     database_user: root
-    database_password: null
+    database_password: root
     mailer_transport: smtp
     mailer_host: 127.0.0.1
-    mailer_user: null
+    mailer_user: blablabla@gmail.com
     mailer_password: null
     secret: d66a0bf8bfb3cd249f13a8f60bdfdce6540cca54
