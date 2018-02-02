@@ -5,34 +5,17 @@ namespace AppBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
-class StartpageController
+
+class StartpageController extends Controller
 {
-    /**
-     * @Route("my_crowdin/")
-     */
-    public function startAction()
+  /**
+   * @Route("/", name="homepage")
+   */
+    public function startAction(Request $request)
     {
-        return new Response(
-            '<html>
-              <head>
-
-              </head>
-              <body>
-                <center>
-                  <p>
-                  Welcome to my_crowdin project
-                  </p>
-                  <p>
-                  Would you like to be part of our amazing community of devoted translaters ? </br>
-                  <p>
-                  Don&#145t hesitate and join us now !
-                  </p>
-                  </p>
-
-                </center>
-              </body>
-            </html>'
-        );
+        return $this->render('default/startPage.html.twig');
     }
 }

@@ -24,4 +24,8 @@
                 parent::__construct();
                 // your own logic
             }
+
+            protected $translationLanguge;
+
+
         }
