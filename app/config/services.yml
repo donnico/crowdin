@@ -33,3 +33,7 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+
+    file_uploader:
+            class: AppBundle\Entity\FileUploaded
+
