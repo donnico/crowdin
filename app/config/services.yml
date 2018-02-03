@@ -37,3 +37,9 @@ services:
     file_uploader:
             class: AppBundle\Entity\FileUploaded
 
+    #doctrine_file_listener:
+      #      class: AppBundle\EventListener\FileUploaded
+       #     arguments: ['@file_uploader']
+       #     tags:
+       #         - { name: doctrine.event_listener, event: prePersist }
+       #         - { name: doctrine.event_listener, event: preUpdate }

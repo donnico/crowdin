@@ -31,7 +31,7 @@
              *
              * @Assert\NotBlank(message="Ajouter un fichier .txt")
              * @Assert\File(mimeTypes={ "text/plain" })
-             *  @ORM\GeneratedValue(strategy="AUTO")
+             * @ORM\GeneratedValue(strategy="AUTO")
              */
             private $file;
 
@@ -43,6 +43,25 @@
             public function setFile($file)
             {
                 $this->file = $file;
+
+                return $this;
+            }
+
+            /**
+             * @var string
+             * @ORM\Column(name="language", type="string", length=255, nullable=true)
+             * @ORM\GeneratedValue(strategy="AUTO")
+             */
+            private $language;
+
+            public function getLanguage()
+            {
+                return $this->language;
+            }
+
+            public function setLanguage($language)
+            {
+                $this->language = $language;
 
                 return $this;
             }
