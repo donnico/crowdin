@@ -31,6 +31,10 @@ framework:
     assets: ~
     php_errors:
         log: true
+    request:
+            formats:
+                xliff : 'application/xliff'
+                yml : 'application/yml'
 
 # Twig Configuration
 twig:
