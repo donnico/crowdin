@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+<p>Welcome to your dashboard !!</p>
+    <p>You can add a file for translation</p>
+
+    {{ form_start(form) }}
+    {{form_widget(form)}}
+    <input class="btn btn-success" type="submit" value="Add" />
+    {{ form_end(form) }}
+
+    <br/>
+    <a href="{{ path('fos_user_security_logout') }}">logout</a>
+    <br/>
+    <a href="{{ path('homepage') }}">home page</a>
+
+{% endblock %}
+

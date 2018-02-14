@@ -35,7 +35,8 @@ services:
     #         $someArgument: 'some_value'
 
     file_uploader:
-            class: AppBundle\Entity\FileUploaded
+            class: AppBundle\Service\FileUploaded
+            arguments: ['%files_directory%']
 
     #doctrine_file_listener:
       #      class: AppBundle\EventListener\FileUploaded

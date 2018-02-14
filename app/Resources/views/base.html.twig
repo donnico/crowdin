@@ -2,12 +2,71 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        {% endblock %}
     </head>
+
+
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+    <div class="container">
+
+        <div id="header" class="jumbotron">
+
+            <h1>Crowdin Plateform</h1>
+            <p>
+                Bienvenue sur la plateforme d'échange de traduction my_Crowdin, propulsée par Walid, Nicolas et Nolwenn
+            </p>
+        </div>
+
+        <div class="row">
+
+            <div id="menu" class="col-md-3">
+
+                <h3>Menu</h3>
+
+                <ul class="nav nav-pills nav-stacked">
+
+                    <li><a href="{{ path('homepage') }}">Accueil</a></li>
+                    {% if app.user %}
+                    <li><a href="{{ path('dashboard') }}">Dashboard</a></li>
+                    <li><a href="{{ path('choice') }}">A traduire</a></li>
+                    <li><a href="{{ path('translation') }}">Traduction</a></li>
+                    <li><a href="{{ path('summary') }}">Historique</a></li>
+                    <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+
+                    {% endif %}
+
+                </ul>
+
+            </div>
+
+            <div id="content" class="col-md-9">
+
+                {% block body %}
+
+                {% endblock %}
+
+            </div>
+
+        </div>
+        <hr>
+        <footer>
+
+            <p>Designed by Nolwenn © {{ 'now'|date('Y') }}.</p>
+
+        </footer>
+        {% block javascripts %}
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        {% endblock %}
+    </div>
+
     </body>
 </html>

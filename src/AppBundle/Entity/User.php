@@ -6,6 +6,7 @@
         use FOS\UserBundle\Model\User as BaseUser;
         use Doctrine\ORM\Mapping as ORM;
         use Symfony\Component\Validator\Constraints as Assert;
+        use AppBundle\Service;
 
         /**
          * @ORM\Entity
@@ -26,26 +27,7 @@
                 // your own logic
             }
 
-            /**
-             * @ORM\Column(type="string")
-             *
-             * @Assert\NotBlank(message="Ajouter un fichier .txt")
-             * @Assert\File(mimeTypes={ "text/plain", "application/xliff", "application/yml" })
-             * @ORM\GeneratedValue(strategy="AUTO")
-             */
-            private $file;
 
-            public function getFile()
-            {
-                return $this->file;
-            }
-
-            public function setFile($file)
-            {
-                $this->file = $file;
-
-                return $this;
-            }
 
             /**
              * @var string

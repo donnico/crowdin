@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My_Crowdin Project{% endblock %}
+
+{% block body %}
+    <center>
+      <p>
+       Welcome to my_crowdin project
+      </p>
+
+      <p>
+          <a href="{{ path('fos_user_security_login') }}">LOGIN</a>
+      </p>
+
+      <p>
+        Would you like to be part of our amazing community of devoted translaters ? </br>
+      </p>
+
+      <p>
+      Don&#145t hesitate and join us now !
+      </p>
+
+      <p>
+        <a href="{{ path('fos_user_registration_register') }}">REGISTER</a>
+
+      </p>
+
+    </center>
+{% endblock %}

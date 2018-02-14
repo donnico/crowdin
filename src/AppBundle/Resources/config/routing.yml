@@ -1,0 +1,25 @@
+appbundle_home:
+    path:      /
+    defaults:
+        _controller: AppBundle:Startpage:start
+
+appbundle_dashboard:
+    path:      /dashboard/{id}
+    defaults:
+        _controller: AppBundle:Dashboard:dashboard
+    requirements:
+        id: \d+
+
+appbundle_trad_interface:
+    path:      /trad/{id}
+    defaults:
+        _controller: AppBundle:Startpage:something
+    requirements:
+        id: \d+
+
+appbundle_summarytrad_interface:
+    path:      /choice/interface{id}
+    defaults:
+        _controller: AppBundle:Startpage:something
+    requirements:
+        id: \d+

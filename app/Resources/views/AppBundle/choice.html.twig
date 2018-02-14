@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+
+
+{% block title %}
+
+    Accueil - {{ parent() }}
+
+{% endblock %}
+
+
+{% block body %}
+
+
+    <h2>Liste des documents à traduire</h2>
+
+    <ul>
+        {%  for document in listDocuments %}
+            <li>
+
+                <a href="{{ path('choice', {'id': document.id}) }}">
+
+                    {{ advert.title }}
+
+                </a>
+
+                par {{ advert.author }},
+
+                le {{ advert.date|date('d/m/Y') }}
+            </li>
+        {% else %}
+
+            <li>Pas (encore !) d'annonces</li>
+
+        {% endfor %}
+
+    </ul>
+
+{% endblock %}
