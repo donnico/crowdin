@@ -10,4 +10,3 @@ parameters:
     mailer_user: blablabla@gmail.com
     mailer_password: null
     secret: d66a0bf8bfb3cd249f13a8f60bdfdce6540cca54
-
